@@ -1,0 +1,16 @@
+.tech-icons {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.tech-icons img {
+  width: 28px;
+  height: 28px;
+  opacity: 0.95;
+  transition: transform 0.2s ease;
+}
+
+.tech-icons img:hover {
+  transform: scale(1.1);
+}
