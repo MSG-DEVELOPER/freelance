@@ -37,6 +37,7 @@
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="portfolio.style.css" />
 
     <!-- =======================================================
   * Template Name: FolioOne
@@ -97,8 +98,10 @@
               data-aos-delay="200"
             >
               <li data-filter="*" class="filter-active">All</li>
+              <li data-filter=".filter-productos">Productos</li>
+              <li data-filter=".filter-full">Full Stack</li>
               <li data-filter=".filter-strategy">Strategy</li>
-              <li data-filter=".filter-finance">Finance</li>
+
               <li data-filter=".filter-operations">Operations</li>
               <li data-filter=".filter-technology">Technology</li>
             </ul>
@@ -110,32 +113,64 @@
               data-aos-delay="300"
             >
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-strategy"
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-full filter-productos"
               >
                 <div class="portfolio-card">
                   <div class="portfolio-img">
                     <img
-                      src="assets/img/portfolio/portfolio-1.webp"
+                      src="assets/img/portfolio/bingo.PNG"
                       alt="Portfolio Item"
                       class="img-fluid"
                     />
                     <div class="portfolio-overlay">
                       <a
-                        href="assets/img/portfolio/portfolio-1.webp"
+                        href="assets/img/portfolio/bingo.PNG"
                         class="glightbox portfolio-lightbox"
                         ><i class="bi bi-plus"></i
                       ></a>
-                      <a href="#" class="portfolio-details-link"
+                      <a
+                        href="https://github.com/MSG-DEVELOPER/Bingo_preview"
+                        class="portfolio-details-link"
+                        target="_blank"
                         ><i class="bi bi-link"></i
                       ></a>
                     </div>
                   </div>
                   <div class="portfolio-info">
-                    <h4>Business Growth Strategy</h4>
-                    <p>Strategic Planning</p>
-                    <div class="portfolio-tags">
-                      <span>Strategy</span>
-                      <span>Consulting</span>
+                    <h4>App Web Bingo</h4>
+                    <div class="tech-icons mb-4 mt-2">
+                      <img
+                        src="assets/img/portfolio/next.svg"
+                        alt="Next.js"
+                        class="tech-icon"
+                      />
+                       <img
+                        src="assets/img/portfolio/tailwind.svg"
+                        alt="Next.js"
+                        class="tech-icon"
+                      />
+                        <img
+                        src="assets/img/portfolio/node.svg"
+                        alt="Next.js"
+                        class="tech-icon"
+                      />
+
+                        <img
+                        src="assets/img/portfolio/sql.svg"
+                        alt="Next.js"
+                        class="tech-icon"
+                      />
+                    </div>
+                    <p class="just">
+                      Aplicación web pensada para que grupos cerrados puedan
+                      jugar al bingo. Al tratarse de un producto comercial
+                      todavía en desarrollo, solo puedo adjuntar enlace a
+                      repositorio con capturas y <em>about-tech</em>.
+                    </p>
+                    <div class="portfolio-tags mt-4">
+                      <span>Producto real</span>
+
+                      <span>Full Stack</span>
                     </div>
                   </div>
                 </div>
