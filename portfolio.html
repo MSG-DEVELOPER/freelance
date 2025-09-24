@@ -99,11 +99,11 @@
             >
               <li data-filter="*" class="filter-active">All</li>
               <li data-filter=".filter-productos">Productos Reales</li>
+              <li data-filter=".filter-skill">Proyectos Práctica</li>
               <li data-filter=".filter-full">Full Stack</li>
-              <li data-filter=".filter-skill">Mejora Habilidades</li>
 
               <li data-filter=".filter-react">React</li>
-              <li data-filter=".filter-technology">Technology</li>
+              <li data-filter=".filter-extra">Extra</li>
             </ul>
             <!-- End Portfolio Filters -->
 
@@ -127,53 +127,52 @@
                       <a
                         href="assets/img/portfolio/bingo.PNG"
                         class="glightbox portfolio-lightbox"
-                        ><i class="bi bi-plus"></i
+                        title="Zoom"
+                        ><i class="bi bi-zoom-in"></i
                       ></a>
+
                       <a
                         href="https://github.com/MSG-DEVELOPER/Bingo_preview"
                         class="portfolio-details-link"
                         target="_blank"
-                        ><i class="bi bi-globe"></i
-                      ></a>
-
-                        <a
-                        href="https://github.com/MSG-DEVELOPER/Bingo_preview"
-                        class="portfolio-details-link"
-                        target="_blank"
-                        ><i class="bi bi-git"></i
+                        title="GitHub"
+                        ><i class="bi bi-github"></i
                       ></a>
                     </div>
                   </div>
                   <div class="portfolio-info">
-                    <h4>App Web Bingo</h4>
+                    <h4>App Web de bingo</h4>
                     <div class="tech-icons mb-4 mt-2">
                       <img
                         src="assets/img/portfolio/next.svg"
                         alt="Next.js"
                         class="tech-icon"
+                        title="Next.js"
                       />
                       <img
                         src="assets/img/portfolio/tailwind.svg"
-                        alt="Next.js"
+                        alt="Tailwind"
                         class="tech-icon"
+                        title="Tailwind"
                       />
                       <img
                         src="assets/img/portfolio/node.svg"
-                        alt="Next.js"
+                        alt="Node.js"
                         class="tech-icon"
+                        title="Node.js"
                       />
 
                       <img
                         src="assets/img/portfolio/sql.svg"
-                        alt="Next.js"
+                        alt="MySql"
                         class="tech-icon"
+                        title="MySql"
                       />
                     </div>
                     <p class="just">
-                      Aplicación web pensada para que grupos cerrados puedan
-                      jugar al bingo. Al tratarse de un producto comercial
-                      todavía en desarrollo, solo puedo adjuntar enlace a
-                      repositorio con capturas y <em>about-tech</em>.
+                      Producto web comercial creado para jugar al bingo en
+                      grupo. Solo puedo adjuntar enlace a repositorio de Github
+                      .
                     </p>
                     <div class="portfolio-tags mt-4">
                       <span>Producto real</span>
@@ -190,49 +189,62 @@
                 <div class="portfolio-card">
                   <div class="portfolio-img">
                     <img
-                      src="assets/img/portfolio/tmdb.PNG"
+                      src="assets/img/portfolio/lazy.PNG"
                       alt="Portfolio Item"
                       class="img-fluid"
                     />
                     <div class="portfolio-overlay">
                       <a
-                        href="assets/img/portfolio/tmdb.PNG"
+                        href="assets/img/portfolio/lazy.PNG"
                         class="glightbox portfolio-lightbox"
-                        ><i class="bi bi-plus"></i
+                        title="Zoom"
+                        ><i class="bi bi-zoom-in"></i
                       ></a>
                       <a
-                        href="https://fetch-api-tmdb.vercel.app/"
+                        href="https://lazy-fetch.vercel.app/"
                         class="portfolio-details-link"
                         target="_blank"
-                        ><i class="bi bi-link"></i
+                        title="Web"
+                        ><i class="bi bi-globe"></i
                       ></a>
+
+                      <a
+                        href="https://github.com/MSG-DEVELOPER/LazyFetch"
+                        class="portfolio-details-link"
+                        target="_blank"
+                        title="Github"
+                        ><i class="bi bi-github"></i
+                      ></a>
+
+                      <a
+                        href="https://www.youtube.com/@LazyFetch"
+                        class="portfolio-details-link"
+                        target="_blank"
+                        title="Tutorial YouTube"
+                      >
+                        <i class="bi bi-youtube"></i>
+                      </a>
                     </div>
                   </div>
                   <div class="portfolio-info">
-                    <h4>Movie Zone database</h4>
+                    <h4>LazyFetch: Librería para fetching</h4>
                     <div class="tech-icons mb-4 mt-2">
                       <img
                         src="assets/img/portfolio/react.svg"
                         alt="react"
                         class="tech-icon"
-                      />
-                      <img
-                        src="assets/img/portfolio/redux.svg"
-                        alt="redux"
-                        class="tech-icon"
+                        title="react"
                       />
                       <img
                         src="assets/img/portfolio/firebase.svg"
                         alt="firebase"
                         class="tech-icon"
+                        title="Firebase"
                       />
                     </div>
                     <p class="just">
-                      Aplicación de galería de películas desarrollada con React,
-                      que consume datos reales desde TMDb. Implementa
-                      autenticación de usuarios con Firebase y formularios con
-                      React Hook Form, y utiliza React Router junto con Redux
-                      para proteger las rutas.
+                      Librería ligera y zero-config para consumir endpoints.
+                      Destaca por ofrecer el fetch más rápido y simple.
                     </p>
                     <div class="portfolio-tags mt-4">
                       <span>Producto real</span>
@@ -242,8 +254,76 @@
                   </div>
                 </div>
               </div>
+
+              <!---->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-skill filter-react"
+              >
+                <div class="portfolio-card">
+                  <div class="portfolio-img">
+                    <img
+                      src="assets/img/portfolio/tmdb.PNG"
+                      alt="Portfolio Item"
+                      class="img-fluid"
+                    />
+                    <div class="portfolio-overlay">
+                      <a
+                        href="assets/img/portfolio/tmdb.PNG"
+                        class="glightbox portfolio-lightbox"
+                        title="Zoom"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
+                      <a
+                        href="https://fetch-api-tmdb.vercel.app/"
+                        class="portfolio-details-link"
+                        target="_blank"
+                        title="Web"
+                        ><i class="bi bi-globe"></i
+                      ></a>
+                      <a
+                        href="https://github.com/MSG-DEVELOPER/ITACADEMY-S7-REACT-API"
+                        class="portfolio-details-link"
+                        target="_blank"
+                        title="GitHub"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="portfolio-info">
+                    <h4>MovieZone database</h4>
+                    <div class="tech-icons mb-4 mt-2">
+                      <img
+                        src="assets/img/portfolio/react.svg"
+                        alt="react"
+                        class="tech-icon"
+                        title="react"
+                      />
+                      <img
+                        src="assets/img/portfolio/redux.svg"
+                        alt="redux"
+                        class="tech-icon"
+                        title="Redux"
+                      />
+                      <img
+                        src="assets/img/portfolio/firebase.svg"
+                        alt="firebase"
+                        class="tech-icon"
+                        title="Firebase"
+                      />
+                    </div>
+                    <p class="just">
+                      App de galería de películas que consume datos reales desde
+                      TMDb. Redux y Firebase para autencticación.
+                    </p>
+                    <div class="portfolio-tags mt-4">
+                      <span>Mejora Habilidades</span>
+                      <span>React</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <!-- Empieza item -->
- <div
+              <div
                 class="col-lg-4 col-md-6 portfolio-item isotope-item filter-skill filter-react"
               >
                 <div class="portfolio-card">
@@ -257,13 +337,23 @@
                       <a
                         href="assets/img/portfolio/test.PNG"
                         class="glightbox portfolio-lightbox"
-                        ><i class="bi bi-plus"></i
+                        title="Zoom"
+                        ><i class="bi bi-zoom-in"></i
                       ></a>
                       <a
                         href="https://techtest-library-lb54510nl-msg-devs-projects.vercel.app/"
                         class="portfolio-details-link"
                         target="_blank"
-                        ><i class="bi bi-link"></i
+                        title="Web"
+                        ><i class="bi bi-globe"></i
+                      ></a>
+
+                      <a
+                        href="https://github.com/MSG-DEVELOPER/TechnicalTest-Library"
+                        class="portfolio-details-link"
+                        target="_blank"
+                        title="Github"
+                        ><i class="bi bi-github"></i
                       ></a>
                     </div>
                   </div>
@@ -274,12 +364,12 @@
                         src="assets/img/portfolio/react.svg"
                         alt="react"
                         class="tech-icon"
+                        title="react"
                       />
-                     
-                    
                     </div>
                     <p class="just">
-                     Prueba técnica propuesta por Midudev para desarrollar la interfaz de una aplicación de biblioteca usando React. El proyecto se centra en la gestión del estado, diseño responsivo y persistencia de datos mediante Local Storag
+                      Prueba técnica de Midudev ,centrada en la gestión de
+                      estado y persistencia de datos con Local Storage.
                     </p>
                     <div class="portfolio-tags mt-4">
                       <span>Mejora Habilidades</span>
@@ -289,15 +379,263 @@
                   </div>
                 </div>
               </div>
-              <!-- Empieza item -->
 
-              <!-- Empieza item -->
+              <!-- nuevo item budget calculator -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-skill filter-react"
+              >
+                <div class="portfolio-card">
+                  <div class="portfolio-img">
+                    <img
+                      src="assets/img/portfolio/budget.PNG"
+                      alt="Portfolio Item"
+                      class="img-fluid"
+                    />
+                    <div class="portfolio-overlay">
+                      <a
+                        href="assets/img/portfolio/budget.PNG"
+                        class="glightbox portfolio-lightbox"
+                        title="Zoom"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
+                      <a
+                        href="https://budget-ivory-five.vercel.app/"
+                        class="portfolio-details-link"
+                        target="_blank"
+                        title="Web"
+                        ><i class="bi bi-globe"></i
+                      ></a>
 
-              <!-- Empieza item -->
+                      <a
+                        href="https://github.com/MSG-DEVELOPER/ITACADEMY-S6-REACT_EXTENSION_BASIC"
+                        class="portfolio-details-link"
+                        target="_blank"
+                        title="Github"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="portfolio-info">
+                    <h4>Calculadora presupuestos</h4>
+                    <div class="tech-icons mb-4 mt-2">
+                      <img
+                        src="assets/img/portfolio/react.svg"
+                        alt="react"
+                        class="tech-icon"
+                        title="react"
+                      />
+                      <span class="tech-icon-bg">
+                        <img
+                          src="assets/img/portfolio/t.svg"
+                          alt="three"
+                          class="tech-icon"
+                          title="Three.js"
+                        />
+                      </span>
+                    </div>
+                    <p class="just">
+                      Calculadora que permite generar múltiples presupuestos y
+                      guardarlos. Página de inicio echa con three.js.
+                    </p>
+                    <div class="portfolio-tags mt-4">
+                      <span>Mejora Habilidades</span>
 
-              <!-- Empieza item -->
+                      <span>React</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-              <!-- Empieza item -->
+              <!-- fin de iten -->
+
+              <!-- nuevo item web it -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-skill"
+              >
+                <div class="portfolio-card">
+                  <div class="portfolio-img">
+                    <img
+                      src="assets/img/portfolio/ecomerce.PNG"
+                      alt="Portfolio Item"
+                      class="img-fluid"
+                    />
+                    <div class="portfolio-overlay">
+                      <a
+                        href="assets/img/portfolio/ecomerce.PNG"
+                        class="glightbox portfolio-lightbox"
+                        title="Zoom"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
+                      <a
+                        href="https://ecommerce-five-hazel.vercel.app/"
+                        class="portfolio-details-link"
+                        target="_blank"
+                        title="Web"
+                        ><i class="bi bi-globe"></i
+                      ></a>
+
+                      <a
+                        href="https://github.com/MSG-DEVELOPER/ITACADEMY-S2.2-ECOMMERCE"
+                        class="portfolio-details-link"
+                        target="_blank"
+                        title="Github"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="portfolio-info">
+                    <h4>E-commerce beta</h4>
+                    <div class="tech-icons mb-4 mt-2">
+                      <img
+                        src="assets/img/portfolio/js.svg"
+                        alt="js"
+                        class="tech-icon"
+                        title="Javascript"
+                      />
+                      <img
+                        src="assets/img/portfolio/bootstrap.svg"
+                        alt="bootstrap"
+                        class="tech-icon"
+                        title="Bootstrap"
+                      />
+                    </div>
+                    <p class="just">
+                      Ejercicio que integra maquetación, estilos y
+                      funcionalidades con JavaScript. Incluye lógica de carrito.
+                    </p>
+                    <div class="portfolio-tags mt-4">
+                      <span>Mejora Habilidades</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fin de item -->
+
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-extra filter-productos"
+              >
+                <div class="portfolio-card">
+                  <div class="portfolio-img">
+                    <img
+                      src="assets/img/portfolio/libro.png"
+                      alt="Portfolio Item"
+                      class="img-fluid"
+                    />
+                    <div class="portfolio-overlay">
+                      <a
+                        href="assets/img/portfolio/libro.png"
+                        class="glightbox portfolio-lightbox"
+                        title="Zoom"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
+
+                      <a
+                        href="https://github.com/MSG-DEVELOPER/book-preview"
+                        class="portfolio-details-link"
+                        target="_blank"
+                        title="GitHub"
+                        ><i class="bi bi-github"></i
+                      ></a>
+
+                      <a
+                        href="https://msg-developer.github.io/book-preview/"
+                        class="portfolio-details-link"
+                        target="_blank"
+                        title="galería"
+                        ><i class="bi bi-images"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="portfolio-info">
+                    <h4>Libro de programación infantil</h4>
+                    <div class="tech-icons mb-4 mt-2">
+                      <img
+                        src="assets/img/portfolio/canva.svg"
+                        alt="canva"
+                        class="tech-icon"
+                        title="Canva"
+                      />
+                    </div>
+                    <p class="just">
+                      En fase prototipo. Pretendo hacerlo con Canva y publicarlo
+                      en Amazon KDP.
+                    </p>
+                    <div class="portfolio-tags mt-4">
+                      <span>Producto real</span>
+
+                      <span>Extra</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- fin de iten -->
+              <div
+                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-skill"
+              >
+                <div class="portfolio-card">
+                  <div class="portfolio-img">
+                    <img
+                      src="assets/img/portfolio/landing.PNG"
+                      alt="Portfolio Item"
+                      class="img-fluid"
+                    />
+                    <div class="portfolio-overlay">
+                      <a
+                        href="assets/img/portfolio/landing.PNG"
+                        class="glightbox portfolio-lightbox"
+                        title="Zoom"
+                        ><i class="bi bi-zoom-in"></i
+                      ></a>
+                      <a
+                        href="https://replica-landing-page.vercel.app/"
+                        class="portfolio-details-link"
+                        target="_blank"
+                        title="Web"
+                        ><i class="bi bi-globe"></i
+                      ></a>
+
+                      <a
+                        href="https://github.com/MSG-DEVELOPER/ITACADEMY-S1.2-Maquetacio1"
+                        class="portfolio-details-link"
+                        target="_blank"
+                        title="Github"
+                        ><i class="bi bi-github"></i
+                      ></a>
+                    </div>
+                  </div>
+                  <div class="portfolio-info">
+                    <h4>Réplica landing page</h4>
+                    <div class="tech-icons mb-4 mt-2">
+                      <img
+                        src="assets/img/portfolio/bootstrap.svg"
+                        alt="bootstrap"
+                        class="tech-icon"
+                        title="Bootstrap"
+                      />
+
+                      <img
+                        src="assets/img/portfolio/sass.svg"
+                        alt="sass"
+                        class="tech-icon"
+                        title="Saas"
+                      />
+                    </div>
+                    <p class="just">
+                      Réplica de landing page con pre procesadores como
+                      Bootstrap y Saas , incluye interactividad de los
+                      elementos.
+                    </p>
+                    <div class="portfolio-tags mt-4">
+                      <span>Mejora Habilidades</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- fin item -->
+              <!-- inicio item libro -->
+
+              <!-- fin item -->
             </div>
             <!-- End Portfolio Items Container -->
           </div>

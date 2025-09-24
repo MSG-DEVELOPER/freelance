@@ -10,6 +10,18 @@
   height: 40px;
 }
 
-.just{
-    text-align: justify;
+.just {
+  text-align: justify;
 }
+
+.tech-icon-bg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.65); /* blanco semi-transparente */
+  width: 50px;   /* tamaño del círculo */
+  height: 50px;  /* tamaño del círculo */
+  border-radius: 50%; /* círculo perfecto */
+  padding: 16px; /* opcional, para ajustar el icono dentro */
+}
+
