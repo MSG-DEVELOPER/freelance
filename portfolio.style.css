@@ -36,3 +36,9 @@
   object-fit: cover;
 }
 
+.highlight {
+  color:#2196f3; /* color llamativo */
+  font-weight: 700; /* negrita */
+  font-size: 1.05em; /* un poquito más grande */
+}
+
