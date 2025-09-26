@@ -1,0 +1,48 @@
+.highlight {
+   color:#2196f3; /* rojo de ejemplo */
+  font-weight: bold;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column; /* Icono arriba, texto debajo */
+  align-items: center;    /* Centra horizontalmente */
+  margin-bottom: 2rem;    /* Separación entre items */
+  padding-bottom: 1.5rem; /* Espacio antes de la línea */
+  border-bottom: 1px solid #ddd; /* Línea fina */
+}
+
+.info-item:last-child {
+  border-bottom: none; /* Quita la línea del último item */
+}
+
+.icon-box {
+  font-size: 2rem;
+  color: #ff4d4d; /* Color principal */
+  margin-bottom: 0.5rem;
+}
+
+.content h4 {
+  margin-bottom: 0.25rem;
+}
+
+.content p a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.mail-part.highlight {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+.info-box {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .col-lg-6 {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
