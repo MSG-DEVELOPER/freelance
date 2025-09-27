@@ -1,0 +1,11 @@
+.link-highlight {
+  margin-left: 8px;
+  font-weight: 500;
+  color: blue
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.link-highlight:hover {
+  color: blueviolet;
+  text-decoration: underline;
+}
