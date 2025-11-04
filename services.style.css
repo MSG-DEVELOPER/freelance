@@ -32,3 +32,7 @@
   font-weight: 700; /* negrita */
   font-size: 1.05em; /* un poquito más grande */
 }
+
+.j{
+  text-align: justify;
+}
