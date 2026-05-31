@@ -92,14 +92,64 @@
   });
 
   /**
-   * Preloader
+   * Intro splash + deferred page reveal
    */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
+  function aosInit() {
+    AOS.init({
+      duration: 600,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
     });
   }
+
+  function initTyped() {
+    const selectTyped = document.querySelector('.typed');
+    if (!selectTyped) return;
+
+    let typed_strings = selectTyped.getAttribute('data-typed-items');
+    typed_strings = typed_strings.split(',');
+    new Typed('.typed', {
+      strings: typed_strings,
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000
+    });
+  }
+
+  function finishIntro() {
+    aosInit();
+    initTyped();
+    if (typeof AOS !== 'undefined') {
+      AOS.refresh();
+    }
+  }
+
+  const introSplash = document.querySelector('#intro-splash');
+  const introQuote = introSplash?.querySelector('.intro-quote');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function runIntroSplash() {
+    if (!introSplash || !introQuote || prefersReducedMotion) {
+      introSplash?.remove();
+      finishIntro();
+      return;
+    }
+
+    document.body.classList.add('intro-locked');
+
+    setTimeout(() => introQuote.classList.add('is-visible'), 500);
+    setTimeout(() => introQuote.classList.remove('is-visible'), 3200);
+    setTimeout(() => introSplash.classList.add('is-exiting'), 4000);
+    setTimeout(() => {
+      introSplash.remove();
+      document.body.classList.remove('intro-locked');
+      finishIntro();
+    }, 4900);
+  }
+
+  window.addEventListener('load', runIntroSplash);
 
   /**
    * Scroll top button
@@ -121,35 +171,6 @@
 
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
-
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
-  }
-  window.addEventListener('load', aosInit);
-
-  /**
-   * Init typed.js
-   */
-  const selectTyped = document.querySelector('.typed');
-  if (selectTyped) {
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
-  }
 
   /**
    * Animate the skills items on reveal

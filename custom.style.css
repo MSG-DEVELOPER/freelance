@@ -55,6 +55,65 @@ html {
   scroll-padding-top: 56px;
 }
 
+.intro-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  opacity: 1;
+  transition: opacity 0.9s ease;
+}
+
+.intro-splash.is-exiting {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.intro-locked {
+  overflow: hidden;
+}
+
+.intro-quote {
+  max-width: 800px;
+  margin: 0;
+  padding: 0 1.5rem;
+  color: #fff;
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.intro-quote.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro-quote p {
+  margin: 0;
+}
+
+.intro-quote footer {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.intro-quote-mark {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  font-style: normal;
+  color: var(--accent-color);
+}
+
 .header {
   padding: 8px 0;
 }
