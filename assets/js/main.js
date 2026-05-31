@@ -49,37 +49,6 @@
   });
 
   /**
-   * Highlight nav on scroll (single-page)
-   */
-  const navLinks = document.querySelectorAll('#navmenu a[href^="#"]');
-  const scrollSections = document.querySelectorAll('main > section[id]');
-
-  function navHighlighter() {
-    if (!navLinks.length || !scrollSections.length) return;
-
-    const scrollY = window.scrollY + 150;
-    let current = '';
-
-    scrollSections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      if (scrollY >= top && scrollY < top + height) {
-        current = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) {
-        link.classList.add('active');
-      }
-    });
-  }
-
-  window.addEventListener('scroll', navHighlighter);
-  window.addEventListener('load', navHighlighter);
-
-  /**
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {

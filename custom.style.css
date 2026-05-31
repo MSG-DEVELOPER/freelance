@@ -127,6 +127,27 @@ body.intro-locked {
   .navmenu a:focus {
     font-size: 14px;
   }
+
+  .navmenu a:hover:before,
+  .navmenu li:hover > a:before,
+  .navmenu .active:before {
+    visibility: hidden !important;
+    width: 0 !important;
+  }
+
+  .navmenu li:hover > a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-color) !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .navmenu a:hover,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-dropdown-color) !important;
+  }
 }
 
 @media (min-width: 992px) {
