@@ -52,7 +52,70 @@
 }
 
 html {
-  scroll-padding-top: 80px;
+  scroll-padding-top: 56px;
+}
+
+.header {
+  padding: 8px 0;
+}
+
+@media (min-width: 1200px) {
+  .navmenu > ul > li {
+    padding: 4px 16px 4px 0;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 992px) {
+  #hero.hero.section {
+    min-height: calc(100svh - 52px);
+    padding: 1rem 0 1.25rem;
+    scroll-margin-top: 52px;
+  }
+
+  #hero .hero-content h1 {
+    font-size: 2.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #hero .hero-content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.85rem;
+  }
+
+  #hero .hero-content p {
+    font-size: 0.98rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  #hero .hero-actions {
+    margin-bottom: 1rem;
+    gap: 0.75rem;
+  }
+
+  #hero .hero-actions .btn {
+    padding: 9px 22px;
+    font-size: 0.95rem;
+  }
+
+  #hero .social-links a {
+    width: 40px;
+    height: 40px;
+    font-size: 1.05rem;
+  }
+
+  #hero .row.gy-4 {
+    --bs-gutter-y: 0.75rem;
+  }
+
+  .hero .hero-image .floating-elements .floating-card {
+    padding: 12px 16px;
+  }
 }
 
 .link-highlight {
@@ -128,55 +191,108 @@ html {
   height: 4rem;
 }
 
-.info-item {
+#contact.contact-compact {
+  padding: 40px 0 45px;
+}
+
+#contact.contact-compact .section-title {
+  padding-bottom: 20px;
+}
+
+#contact .contact-lead {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+}
+
+#contact .contact-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #ddd;
-}
-
-.info-item:last-child {
-  border-bottom: none;
-}
-
-.icon-box {
-  font-size: 2rem;
-  color: #ff4d4d;
-  margin-bottom: 0.5rem;
-}
-
-.content h4 {
-  margin-bottom: 0.25rem;
-}
-
-.content p a {
+  text-align: center;
+  height: 100%;
+  padding: 0.85rem 0.5rem;
+  border-radius: 12px;
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  transition: transform 0.2s ease, border-color 0.2s ease;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
-.info-box {
-  text-align: center;
+#contact a.contact-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 45%);
 }
 
-@media (min-width: 992px) {
-  #contact .col-lg-6 {
-    max-width: 600px;
-    margin: 0 auto;
-  }
+#contact a.contact-card:hover p {
+  color: var(--accent-color);
 }
 
-.hero .hero-image .floating-elements .floating-card .floating-card-icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  flex-shrink: 0;
+#contact .contact-card-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.45rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
 }
 
-.hero .hero-image .floating-elements .floating-card.typescript {
-  bottom: 30%;
+#contact .contact-card-icon i {
+  font-size: 1.15rem;
+  color: var(--accent-color);
+}
+
+#contact .contact-card h4 {
+  margin: 0 0 0.2rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--heading-color);
+}
+
+#contact .contact-card p {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  color: var(--default-color);
+  word-break: break-word;
+  transition: color 0.2s ease;
+}
+
+.hero .hero-image .floating-elements .floating-card span {
+  font-size: 0.82rem;
+  line-height: 1.2;
+  max-width: 9rem;
+}
+
+.hero .hero-image .floating-elements .floating-card.skill-improve {
+  top: 8%;
+  right: -12%;
+  animation-delay: 0s;
+}
+
+.hero .hero-image .floating-elements .floating-card.skill-communication {
+  bottom: 12%;
   left: -15%;
-  animation-delay: 1s;
+  animation-delay: 0.75s;
+}
+
+.hero .hero-image .floating-elements .floating-card.skill-team {
+  bottom: 12%;
+  right: -10%;
+  animation-delay: 1.5s;
+}
+
+.hero .hero-image .floating-elements .floating-card.skill-commitment {
+  top: 8%;
+  left: -12%;
+  animation-delay: 2.25s;
 }
 
 .services.stack-simple {
@@ -226,49 +342,82 @@ html {
   flex-shrink: 0;
 }
 
-.soft-skills-block {
-  margin-top: 3rem;
-}
-
-.services.stack-simple .soft-skills-block .section-title {
-  padding-bottom: 60px;
-}
-
-.soft-skills-block .fact-pill {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  background: var(--surface-color);
-  color: color-mix(in srgb, var(--default-color), transparent 10%);
-  transition: 0.3s ease-in-out;
-}
-
-.soft-skills-block .fact-pill i {
-  color: var(--accent-color);
-}
-
-.soft-skills-block .fact-pill span {
-  font-size: 14px;
-}
-
-.soft-skills-block .fact-pill:hover {
-  transform: translateY(-2px);
-  border-color: color-mix(in srgb, var(--accent-color), transparent 60%);
-  box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 92%);
-}
-
-.soft-skills-block .fact-pill:focus-within {
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent-color), transparent 70%);
-}
-
 #portfolio .section-title {
   padding-bottom: 24px;
 }
 
-#portfolio .portfolio-heading {
+#portfolio .portfolio-heading,
+#services .section-title h2,
+#resume .section-title h2,
+#contact .section-title h2 {
   color: var(--accent-color);
+}
+
+#resume .resume-split {
+  align-items: stretch;
+}
+
+#resume .resume-panel {
+  padding: 2rem 1.75rem;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+}
+
+#resume .resume-panel-education {
+  background: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+}
+
+#resume .resume-panel-experience {
+  background: #1a2630;
+  color: #e8eef2;
+}
+
+#resume .resume-panel-experience .resume-title,
+#resume .resume-panel-experience article h4 {
+  color: #ffffff;
+}
+
+#resume .resume-company-link {
+  color: var(--accent-color);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent-color), transparent 35%);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+#resume .resume-company-link:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+
+#resume .resume-panel-experience article h5 {
+  background: color-mix(in srgb, var(--accent-color), transparent 55%);
+  color: #ffffff;
+}
+
+#resume .resume-panel-experience .institution,
+#resume .resume-panel-experience .company {
+  color: color-mix(in srgb, #ffffff, transparent 30%);
+}
+
+#resume .resume-panel-experience article p,
+#resume .resume-panel-experience article ul,
+#resume .resume-panel-experience article ul li {
+  color: color-mix(in srgb, #ffffff, transparent 12%);
+}
+
+#resume .resume-panel-experience .resume-content {
+  border-left-color: color-mix(in srgb, var(--accent-color), transparent 35%);
+}
+
+#resume .resume-panel-experience article::before {
+  background: #1a2630;
+  border-color: var(--accent-color);
+}
+
+@media (min-width: 992px) {
+  #resume .resume-panel {
+    margin-bottom: 0;
+  }
 }
