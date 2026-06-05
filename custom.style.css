@@ -262,6 +262,10 @@ body.intro-locked {
   object-fit: cover;
 }
 
+.img-container.img-container-cover-top img {
+  object-position: top center;
+}
+
 .just,
 .j {
   text-align: justify;
