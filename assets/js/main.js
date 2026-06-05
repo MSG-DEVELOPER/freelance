@@ -72,20 +72,43 @@
     });
   }
 
+  let typedInstance = null;
+
   function initTyped() {
     const selectTyped = document.querySelector('.typed');
     if (!selectTyped) return;
 
-    let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
+    const typedStrings = selectTyped
+      .getAttribute('data-typed-items')
+      .split(',')
+      .map((item) => item.trim());
+    const isLargeScreen = window.matchMedia('(min-width: 1280px)').matches;
+
+    if (typedInstance) {
+      typedInstance.destroy();
+      typedInstance = null;
+    }
+
+    selectTyped.textContent = '';
+
+    if (isLargeScreen) {
+      typedInstance = new Typed('.typed', {
+        strings: typedStrings,
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000
+      });
+    } else {
+      selectTyped.textContent = typedStrings[0];
+    }
   }
+
+  let typedResizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(typedResizeTimer);
+    typedResizeTimer = setTimeout(initTyped, 150);
+  });
 
   function finishIntro() {
     aosInit();
