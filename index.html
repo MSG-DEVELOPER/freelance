@@ -63,14 +63,51 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="#hero">Inicio</a></li>
-            <li><a href="#services">Stack</a></li>
-            <li><a href="#portfolio">Portafolio</a></li>
-            <li><a href="#resume">CV</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <li>
+              <a href="#hero">
+                <span class="nav-index">01</span>
+                <span class="nav-label">Inicio</span>
+              </a>
+            </li>
+            <li>
+              <a href="#services">
+                <span class="nav-index">02</span>
+                <span class="nav-label">Stack</span>
+              </a>
+            </li>
+            <li>
+              <a href="#portfolio">
+                <span class="nav-index">03</span>
+                <span class="nav-label">Portafolio</span>
+              </a>
+            </li>
+            <li>
+              <a href="#resume">
+                <span class="nav-index">04</span>
+                <span class="nav-label">CV</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact">
+                <span class="nav-index">05</span>
+                <span class="nav-label">Contacto</span>
+              </a>
+            </li>
           </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          <div class="mobile-nav-meta" aria-hidden="true">
+            <p class="mobile-nav-brand">Marcos Solé</p>
+            <p class="mobile-nav-role">Front-End · React</p>
+          </div>
         </nav>
+        <button type="button" class="mobile-nav-toggle" aria-label="Abrir menú" aria-controls="navmenu" aria-expanded="false">
+          <span class="mobile-nav-toggle-ring" aria-hidden="true"></span>
+          <svg class="mobile-nav-icon mobile-nav-icon--open" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path fill="currentColor" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/>
+          </svg>
+          <svg class="mobile-nav-icon mobile-nav-icon--close" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false" hidden>
+            <path fill="currentColor" d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+          </svg>
+        </button>
       </div>
     </header>
 

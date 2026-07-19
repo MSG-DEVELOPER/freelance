@@ -28,12 +28,22 @@
   const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
 
   function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
+    const body = document.querySelector('body');
+    const isOpen = body.classList.toggle('mobile-nav-active');
+    if (!mobileNavToggleBtn) return;
+    const openIcon = mobileNavToggleBtn.querySelector('.mobile-nav-icon--open');
+    const closeIcon = mobileNavToggleBtn.querySelector('.mobile-nav-icon--close');
+    if (openIcon) openIcon.hidden = isOpen;
+    if (closeIcon) closeIcon.hidden = !isOpen;
+    mobileNavToggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    mobileNavToggleBtn.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
   }
   if (mobileNavToggleBtn) {
-    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+    mobileNavToggleBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      mobileNavToogle();
+    });
   }
 
   /**
