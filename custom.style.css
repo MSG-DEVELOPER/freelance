@@ -177,12 +177,6 @@ body.intro-locked {
     margin-bottom: 0.85rem;
   }
 
-  #hero .hero-content p {
-    font-size: 0.98rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-  }
-
   #hero .hero-actions {
     margin-bottom: 1rem;
     gap: 0.75rem;
@@ -517,6 +511,260 @@ body.intro-locked {
 }
 
 /* ============================================================
+   Work Feature — full-width showcase (visual-impact-mode)
+   Direction: futuristic SaaS / editorial
+   ============================================================ */
+
+#portfolio .work-feature {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  margin-bottom: 2.5rem;
+  border-radius: var(--folio-radius-lg, 22px);
+  overflow: hidden;
+  background: #101a20;
+  border: 1px solid color-mix(in srgb, #ffffff, transparent 88%);
+  box-shadow:
+    0 24px 60px color-mix(in srgb, #101a20, transparent 78%),
+    0 0 0 1px color-mix(in srgb, var(--accent-color), transparent 88%);
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#portfolio .work-feature:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 32px 80px color-mix(in srgb, #101a20, transparent 70%),
+    0 0 40px color-mix(in srgb, var(--accent-color), transparent 82%);
+}
+
+#portfolio .work-feature-media {
+  position: relative;
+  min-height: 240px;
+  overflow: hidden;
+  background: #0a1218;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#portfolio .work-feature-media a.work-feature-zoom {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: zoom-in;
+}
+
+#portfolio .work-feature-media img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center top;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#portfolio .work-feature:hover .work-feature-media img {
+  transform: scale(1.04);
+}
+
+#portfolio .work-feature-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 55%,
+    color-mix(in srgb, #101a20, transparent 40%) 100%
+  );
+  pointer-events: none;
+  opacity: 0;
+}
+
+#portfolio .work-feature-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.75rem 1.5rem 2rem;
+  color: #e8eef2;
+}
+
+#portfolio .work-feature-tag {
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Producto: máxima jerarquía */
+#portfolio .work-feature-tag--product {
+  color: #fff;
+  background: var(--accent-color);
+  border: 1px solid color-mix(in srgb, var(--accent-color), #fff 15%);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--accent-color), transparent 55%);
+}
+
+/* Prácticas: contraste medio */
+#portfolio .work-feature-tag--practice {
+  color: #d8eef9;
+  background: color-mix(in srgb, var(--accent-color), #101a20 55%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 45%);
+}
+
+/* Proyecto personal: más sutil */
+#portfolio .work-feature-tag--personal {
+  color: color-mix(in srgb, #ffffff, transparent 25%);
+  background: color-mix(in srgb, #ffffff, transparent 90%);
+  border: 1px solid color-mix(in srgb, #ffffff, transparent 78%);
+}
+
+#portfolio .work-feature-title {
+  margin: 0 0 0.85rem;
+  font-family: var(--heading-font);
+  font-size: clamp(1.65rem, 3.5vw, 2.35rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+#portfolio .work-feature-desc {
+  margin: 0 0 1.35rem;
+  max-width: 36rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: color-mix(in srgb, #ffffff, transparent 28%);
+}
+
+#portfolio .work-feature-tech {
+  margin: 0 0 1.5rem;
+  gap: 0.65rem;
+}
+
+#portfolio .work-feature-tech .tech-icon {
+  width: 36px;
+  height: 36px;
+  padding: 4px;
+  border-radius: 8px;
+  background: color-mix(in srgb, #ffffff, transparent 92%);
+}
+
+#portfolio .work-feature-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+#portfolio .work-feature-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #fff;
+  background: var(--accent-color);
+  border: 1px solid transparent;
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease;
+}
+
+#portfolio .work-feature-cta:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  background: color-mix(in srgb, var(--accent-color), #fff 12%);
+  box-shadow: 0 12px 32px color-mix(in srgb, var(--accent-color), transparent 55%);
+}
+
+#portfolio .work-feature-cta-secondary {
+  background: transparent;
+  color: #e8eef2;
+  border-color: color-mix(in srgb, #ffffff, transparent 70%);
+}
+
+#portfolio .work-feature-cta-secondary:hover {
+  color: #fff;
+  background: color-mix(in srgb, #ffffff, transparent 90%);
+  border-color: color-mix(in srgb, #ffffff, transparent 45%);
+  box-shadow: none;
+}
+
+#portfolio .work-feature-cta i {
+  font-size: 1.05rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+#portfolio .work-feature-cta:hover i {
+  transform: none;
+}
+
+#portfolio .work-feature-cta:hover .bi-globe2 {
+  transform: scale(1.08);
+}
+
+@media (min-width: 992px) {
+  #portfolio .work-feature {
+    grid-template-columns: 1.35fr 1fr;
+    align-items: stretch;
+    margin-bottom: 3rem;
+  }
+
+  #portfolio .work-feature-media {
+    min-height: 100%;
+    padding: 1.25rem;
+  }
+
+  #portfolio .work-feature-media img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    position: static;
+    border-radius: 12px;
+  }
+
+  #portfolio .work-feature-media::after {
+    opacity: 0;
+  }
+
+  #portfolio .work-feature-body {
+    padding: 2.75rem 2.5rem 2.75rem 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #portfolio .work-feature,
+  #portfolio .work-feature-media img,
+  #portfolio .work-feature-cta,
+  #portfolio .work-feature-cta i {
+    transition: none;
+  }
+
+  #portfolio .work-feature:hover {
+    transform: none;
+  }
+
+  #portfolio .work-feature:hover .work-feature-media img {
+    transform: none;
+  }
+}
+
+/* ============================================================
    Folio UI — frontend-design skill (editorial tech, refined)
    ============================================================ */
 
@@ -603,9 +851,14 @@ body.intro-locked {
 }
 
 .folio-ui .hero-lead {
+  font-family: var(--default-font);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
   text-align: justify;
-  color: var(--folio-muted);
+  color: color-mix(in srgb, var(--default-color), transparent 10%);
   max-width: 36rem;
+  margin-bottom: 1rem;
 }
 
 .folio-ui .hero .hero-content h1 {
