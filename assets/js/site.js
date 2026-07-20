@@ -84,7 +84,7 @@
       "hero.pill1": "Sin letra pequeña",
       "hero.pill2": "Trato directo contigo",
       "hero.pill3": "Entrega clara y rápida",
-      "hero.role": "Fundador · Soluciones Solé",
+      "hero.role": "CEO · Hermanos Solé",
       "hero.priceLabel": "Landing page desde",
       "hero.priceNote": "Menos de lo que cuesta quedarte fuera del mapa digital",
       "values.v1.title": "Transparencia",
@@ -245,7 +245,7 @@
       "hero.pill1": "Sense lletra petita",
       "hero.pill2": "Tracte directe amb tu",
       "hero.pill3": "Entrega clara i ràpida",
-      "hero.role": "Fundador · Soluciones Solé",
+      "hero.role": "CEO · Hermanos Solé",
       "hero.priceLabel": "Landing page des de",
       "hero.priceNote": "Menys del que costa quedar-te fora del mapa digital",
       "values.v1.title": "Transparència",
@@ -406,7 +406,7 @@
       "hero.pill1": "No fine print",
       "hero.pill2": "Direct with you",
       "hero.pill3": "Clear, fast delivery",
-      "hero.role": "Founder · Soluciones Solé",
+      "hero.role": "CEO · Hermanos Solé",
       "hero.priceLabel": "Landing page from",
       "hero.priceNote": "Less than the cost of staying off the digital map",
       "values.v1.title": "Transparency",
@@ -551,7 +551,7 @@
     },
   };
 
-  const applyLang = (lang) => {
+  const applyLang = (lang, persist = false) => {
     const pack = dict[lang] || dict.es;
     document.documentElement.lang = lang;
     document.querySelectorAll("[data-i18n]").forEach((el) => {
@@ -561,15 +561,14 @@
     document.querySelectorAll(".lang-btn").forEach((btn) => {
       btn.classList.toggle("is-active", btn.dataset.lang === lang);
     });
-    localStorage.setItem("ss-lang", lang);
+    if (persist) localStorage.setItem("ss-lang-chosen", lang);
   };
 
   document.querySelectorAll(".lang-btn").forEach((btn) => {
-    btn.addEventListener("click", () => applyLang(btn.dataset.lang || "es"));
+    btn.addEventListener("click", () => applyLang(btn.dataset.lang || "es", true));
   });
 
-  const saved = localStorage.getItem("ss-lang");
-  const guess = (navigator.language || "es").slice(0, 2);
-  const initial = saved || (dict[guess] ? guess : "es");
-  applyLang(initial);
+  // Español por defecto (ignora idioma del navegador)
+  const chosen = localStorage.getItem("ss-lang-chosen");
+  applyLang(chosen === "ca" || chosen === "en" ? chosen : "es");
 })();

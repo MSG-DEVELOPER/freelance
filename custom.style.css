@@ -102,14 +102,10 @@ button {
 .brand-mark {
   width: 42px;
   height: 42px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  font-family: var(--font-display);
-  font-weight: 800;
-  background: linear-gradient(145deg, var(--accent), #9a6418);
-  color: #140f08;
-  letter-spacing: -0.04em;
+  border-radius: 10px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
 }
 
 .brand-text {
@@ -288,15 +284,49 @@ body.nav-open .nav-toggle span:last-child {
 .hero-grid {
   position: relative;
   display: grid;
-  gap: 3.25rem;
-  align-items: end;
+  gap: 2rem;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
 }
 
-@media (min-width: 900px) {
+.hero-copy {
+  grid-column: 1 / -1;
+  order: -1;
+  text-align: center;
+}
+
+.hero-copy .lead,
+.hero-copy .hero-line,
+.hero-copy .hero-price-card {
+  margin-inline: auto;
+}
+
+.hero-copy .hero-actions,
+.hero-copy .hero-pills {
+  justify-content: center;
+}
+
+@media (min-width: 960px) {
   .hero-grid {
-    grid-template-columns: 1.2fr 0.8fr;
-    align-items: center;
-    gap: 4.5rem;
+    grid-template-columns: 0.9fr 1.2fr 0.9fr;
+    gap: 2.5rem 2rem;
+  }
+
+  .hero-copy {
+    grid-column: auto;
+    order: 0;
+    text-align: left;
+  }
+
+  .hero-copy .lead,
+  .hero-copy .hero-line,
+  .hero-copy .hero-price-card {
+    margin-inline: 0;
+  }
+
+  .hero-copy .hero-actions,
+  .hero-copy .hero-pills {
+    justify-content: flex-start;
   }
 }
 
@@ -399,11 +429,6 @@ body.nav-open .nav-toggle span:last-child {
   font-weight: 700;
 }
 
-.hero-aside {
-  display: grid;
-  gap: 1.25rem;
-}
-
 .hero-portrait {
   margin: 0;
   position: relative;
@@ -413,15 +438,9 @@ body.nav-open .nav-toggle span:last-child {
   box-shadow: var(--shadow);
   background: var(--bg-elev);
   aspect-ratio: 4 / 5;
-  max-width: 420px;
+  width: 100%;
+  max-width: 360px;
   margin-inline: auto;
-}
-
-@media (min-width: 900px) {
-  .hero-portrait {
-    margin-inline: 0 0;
-    margin-left: auto;
-  }
 }
 
 .hero-portrait img {
@@ -430,6 +449,10 @@ body.nav-open .nav-toggle span:last-child {
   object-fit: cover;
   object-position: center top;
   filter: saturate(0.92) contrast(1.05);
+}
+
+.hero-portrait--left img {
+  object-position: center 20%;
 }
 
 .hero-portrait figcaption {
@@ -457,23 +480,16 @@ body.nav-open .nav-toggle span:last-child {
 }
 
 .hero-price-card {
-  padding: 1.35rem 1.4rem;
+  margin-top: 1.75rem;
+  padding: 1.15rem 1.25rem;
   border-radius: var(--radius);
   border: 0;
   border-left: 3px solid var(--accent);
   background: var(--bg-elev);
   display: grid;
-  gap: 0.35rem;
-  max-width: 420px;
-  margin-inline: auto;
-}
-
-@media (min-width: 900px) {
-  .hero-price-card {
-    margin-inline: 0 0;
-    margin-left: auto;
-    width: 100%;
-  }
+  gap: 0.25rem;
+  max-width: 28rem;
+  text-align: left;
 }
 
 .price-label {
