@@ -78,7 +78,8 @@
       "hero.eyebrow": "Para negocios locales",
       "hero.title": "Tu negocio también merece existir en internet",
       "hero.lead":
-        "Landing pages, automatizaciones y software a medida. Transparencia, personalización y precios justos — sin renunciar a la calidad. Tu developer de confianza.",
+        "No tienes que entender de tecnología para dar el paso. Nosotros te guiamos con claridad y nos quedamos contigo cuando tu negocio crezca.",
+      "hero.claim": "Tu developer de confianza",
       "hero.cta1": "Empezar desde 199€",
       "hero.cta2": "Ver trabajos reales",
       "hero.pill1": "Sin letra pequeña",
@@ -239,7 +240,8 @@
       "hero.eyebrow": "Per a negocis locals",
       "hero.title": "El teu negoci també mereix existir a internet",
       "hero.lead":
-        "Landing pages, automatitzacions i programari a mida. Transparència, personalització i preus justos — sense renunciar a la qualitat. El teu developer de confiança.",
+        "No cal entendre de tecnologia per fer el pas. Nosaltres et guiem amb claredat i ens quedem amb tu quan el teu negoci creixi.",
+      "hero.claim": "El teu developer de confiança",
       "hero.cta1": "Començar des de 199€",
       "hero.cta2": "Veure treballs reals",
       "hero.pill1": "Sense lletra petita",
@@ -400,7 +402,8 @@
       "hero.eyebrow": "For local businesses",
       "hero.title": "Your business deserves to exist online too",
       "hero.lead":
-        "Landing pages, automations and custom software. Transparency, personalization and fair prices — without cutting quality. Your trusted developer.",
+        "You don't need to understand technology to take the step. We guide you clearly and stay with you as your business grows.",
+      "hero.claim": "Your trusted developer",
       "hero.cta1": "Start from €199",
       "hero.cta2": "See real work",
       "hero.pill1": "No fine print",
