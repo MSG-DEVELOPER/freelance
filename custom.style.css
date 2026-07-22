@@ -250,8 +250,14 @@ body.nav-open .nav-toggle span:last-child {
 /* Hero */
 .hero {
   position: relative;
-  padding: clamp(4rem, 10vw, 7.5rem) 0 clamp(5rem, 11vw, 8.5rem);
+  padding: 2.5rem 0 3.25rem;
   overflow: clip;
+}
+
+@media (min-width: 960px) {
+  .hero {
+    padding: clamp(4rem, 10vw, 7.5rem) 0 clamp(5rem, 11vw, 8.5rem);
+  }
 }
 
 .hero-bg {
@@ -267,15 +273,27 @@ body.nav-open .nav-toggle span:last-child {
 .hero-grid {
   position: relative;
   display: grid;
-  gap: 2rem;
-  align-items: center;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "copy copy"
+    "left right";
+  gap: 1.5rem 1.25rem;
+  align-items: start;
+  justify-items: center;
 }
 
 .hero-copy {
-  grid-column: 1 / -1;
-  order: -1;
+  grid-area: copy;
+  width: 100%;
   text-align: center;
+}
+
+.hero-portrait--left {
+  grid-area: left;
+}
+
+.hero-portrait--right {
+  grid-area: right;
 }
 
 .hero-copy .lead,
@@ -292,12 +310,12 @@ body.nav-open .nav-toggle span:last-child {
 @media (min-width: 960px) {
   .hero-grid {
     grid-template-columns: 0.9fr 1.2fr 0.9fr;
+    grid-template-areas: "left copy right";
     gap: 2.5rem 2rem;
+    align-items: center;
   }
 
   .hero-copy {
-    grid-column: auto;
-    order: 0;
     text-align: left;
   }
 
@@ -445,52 +463,84 @@ body.nav-open .nav-toggle span:last-child {
 
 .hero-portrait {
   margin: 0;
-  position: relative;
-  border-radius: calc(var(--radius) + 6px);
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  max-width: 200px;
+  background: transparent;
   border: 0;
-  box-shadow: var(--shadow);
-  background: var(--bg-elev);
-  aspect-ratio: 4 / 5;
-  width: 100%;
-  max-width: 360px;
-  margin-inline: auto;
+  box-shadow: none;
 }
 
 .hero-portrait img {
-  width: 100%;
-  height: 100%;
+  display: block;
+  width: 200px; /* móvil — cambia este valor */
+  height: 200px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center top;
+  border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  background: var(--bg-elev);
   filter: saturate(0.92) contrast(1.05);
 }
 
 .hero-portrait--left img {
-  object-position: center 20%;
+  object-position: center 18%;
 }
 
 .hero-portrait figcaption {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 1.35rem 1.35rem 1.25rem;
-  background: linear-gradient(transparent, rgba(8, 9, 11, 0.94));
+  position: static;
+  padding: 0.55rem 0 0;
+  background: none;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.1rem;
+  text-align: center;
+  width: 100%;
 }
 
 .hero-portrait strong {
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 0.78rem;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .hero-portrait span {
   color: rgba(91, 143, 245, 0.85);
-  font-size: 0.8125rem;
+  font-size: 0.65rem;
   font-weight: 500;
+  line-height: 1.25;
+}
+
+@media (min-width: 960px) {
+  .hero-portrait {
+    max-width: 360px;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .hero-portrait img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    border-radius: calc(var(--radius) + 6px);
+    box-shadow: var(--shadow);
+  }
+
+  .hero-portrait figcaption {
+    padding: 0.75rem 0.15rem 0;
+  }
+
+  .hero-portrait strong {
+    font-size: 1.05rem;
+  }
+
+  .hero-portrait span {
+    font-size: 0.8125rem;
+  }
 }
 
 .hero-price-card {
