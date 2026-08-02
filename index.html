@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=Parisienne&family=Permanent+Marker&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="custom.style.css?v=20260802-parisienne" />
+    <link rel="stylesheet" href="custom.style.css?v=20260802-casos" />
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
@@ -45,6 +45,7 @@
 
         <nav class="nav" id="nav" aria-label="Principal">
           <a href="#productos">Productos</a>
+          <a href="#casos">Casos de éxito</a>
           <a href="#proceso" data-i18n="nav.process">Proceso</a>
           <a href="#faq" data-i18n="nav.faq">FAQ</a>
           <a href="#contacto" data-i18n="nav.contact">Contacto</a>
@@ -297,185 +298,134 @@
               </div>
             </article>
 
-            <!-- WEB NEGOCIO -->
-            <article class="product-block product-block--flip reveal" id="producto-web">
-              <div class="product-main">
-                <div class="product-copy">
-                  <p class="product-label">Web de negocio</p>
-                  <h3>Qué es</h3>
-                  <p>
-                    Un sitio con varias secciones: quiénes sois, qué ofrecéis,
-                    fotos y cómo contactar. Tu escaparate digital abierto las 24
-                    horas.
-                  </p>
-                  <h3>Para quién es</h3>
-                  <ul class="product-checks">
-                    <li>Necesitas más que una sola página (servicios, sobre ti, contacto…)</li>
-                    <li>Quieres una web seria que transmita confianza</li>
-                    <li>Prefieres algo hecho a medida, no una plantilla genérica</li>
-                  </ul>
-                </div>
-                <figure class="product-example">
+            <!-- WEB SHOP -->
+            <article class="product-block product-block--starter reveal" id="producto-shop">
+              <header class="product-starter-head">
+                <h3 class="product-starter-problem">
+                  Quieres vender online
+                </h3>
+                <p class="product-starter-hook">
+                  Tus clientes quieren comprar o reservar sin depender de
+                  llamadas, mensajes o efectivo.
+                </p>
+                <p>
+                  Convierte tu negocio en un canal de venta abierto 24 horas al
+                  día. Creamos una tienda online profesional donde tus clientes
+                  pueden comprar productos, reservar servicios o pagar una señal
+                  de forma rápida y segura.
+                </p>
+                <p>
+                  Ideal para negocios que quieren empezar a generar ventas por
+                  internet sin complicarse con la tecnología.
+                </p>
+              </header>
+
+              <figure class="product-starter-mock">
+                <button
+                  type="button"
+                  class="product-starter-mock-btn"
+                  data-mock-zoom
+                  aria-label="Ampliar mockup de Web Shop"
+                >
                   <img
-                    src="assets/img/portfolio/wp.PNG"
-                    alt="Ejemplo de web de negocio — educación"
+                    src="assets/img/mockProducts/casa-lino-ecommerce-mockup.png"
+                    alt="Mockup de una Web Shop en escritorio, portátil y móvil"
                     loading="lazy"
                   />
-                  <figcaption>
-                    <span>Ejemplo real</span>
-                    <a
-                      href="https://www.educationforlife.es/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Ver web en vivo →</a
-                    >
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="product-includes">
-                <h3>Qué incluye</h3>
-                <ul>
-                  <li>Hasta 5 secciones</li>
-                  <li>Diseño a medida</li>
-                  <li>Formulario / WhatsApp</li>
-                  <li>Optimización velocidad</li>
-                  <li>1 ronda de cambios</li>
+                  <span class="product-starter-mock-hint">Toca para ampliar</span>
+                </button>
+              </figure>
+
+              <div class="product-includes product-includes--starter">
+                <h3>Web Shop</h3>
+                <ul class="product-checks">
+                  <li>Catálogo de productos o servicios</li>
+                  <li>Carrito de compra intuitivo</li>
+                  <li>Pasarela de pago segura (Stripe)</li>
+                  <li>Panel para gestionar productos y pedidos</li>
+                  <li>Adaptado a móvil, tablet y ordenador</li>
+                  <li>Optimización básica para Google</li>
                 </ul>
               </div>
+
               <div class="product-offer">
                 <div class="product-price">
                   <span class="product-price-label">Desde</span>
-                  <strong>449€</strong>
+                  <strong>249€</strong>
                 </div>
                 <a
                   class="btn btn-primary btn-sm"
-                  href="https://wa.me/34722195284?text=Hola%2C%20me%20interesa%20una%20Web%20de%20negocio%20(449%E2%82%AC)"
+                  href="https://wa.me/34722195284?text=Hola%2C%20me%20interesa%20la%20Web%20Shop%20(249%E2%82%AC)"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Hablar por WhatsApp</a
+                  >Quiero mi Web Shop</a
                 >
               </div>
             </article>
 
-            <!-- AUTOMATIZACIÓN -->
-            <article class="product-block reveal" id="producto-auto">
-              <div class="product-main">
-                <div class="product-copy">
-                  <p class="product-label">Automatización</p>
-                  <h3>Qué es</h3>
-                  <p>
-                    Un flujo que trabaja por ti: reservas, avisos, formularios o
-                    recordatorios. Menos papeleo manual y más tiempo para el
-                    negocio.
-                  </p>
-                  <h3>Para quién es</h3>
-                  <ul class="product-checks">
-                    <li>Pierdes horas en tareas repetitivas cada semana</li>
-                    <li>Quieres reservas o avisos sin depender de Excel o papel</li>
-                    <li>Buscas algo concreto que funcione, no un “sistema infinito”</li>
-                  </ul>
-                </div>
-                <figure class="product-example">
-                  <img
-                    src="assets/img/portfolio/demoFitnesCaptura.png"
-                    alt="Ejemplo de automatización — reservas de gimnasio"
-                    loading="lazy"
-                  />
-                  <figcaption>
-                    <span>Ejemplo real</span>
-                    <a
-                      href="https://tbfitness-demo.lovable.app/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Ver demo en vivo →</a
-                    >
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="product-includes">
-                <h3>Qué incluye</h3>
-                <ul>
-                  <li>1 flujo automatizado</li>
-                  <li>Integración WhatsApp/email</li>
-                  <li>Pruebas incluidas</li>
-                  <li>Documentación simple</li>
-                  <li>Soporte 15 días</li>
-                </ul>
-              </div>
-              <div class="product-offer">
-                <div class="product-price">
-                  <span class="product-price-label">Desde</span>
-                  <strong>299€</strong>
-                </div>
-                <a
-                  class="btn btn-primary btn-sm"
-                  href="https://wa.me/34722195284?text=Hola%2C%20me%20interesa%20una%20Automatizaci%C3%B3n%20(299%E2%82%AC)"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Hablar por WhatsApp</a
-                >
-              </div>
-            </article>
+            <!-- SOFTWARE A MEDIDA -->
+            <article class="product-block product-block--starter reveal" id="producto-software">
+              <header class="product-starter-head">
+                <h3 class="product-starter-problem">
+                  Quieres digitalizar tu negocio con una herramienta
+                  personalizada
+                </h3>
+                <p class="product-starter-hook">
+                  Cada vez inviertes más tiempo en gestionar el negocio y menos
+                  en hacerlo crecer.
+                </p>
+                <p>
+                  Cuando las hojas de cálculo, los mensajes y los procesos
+                  manuales empiezan a limitarte, es el momento de dar el
+                  siguiente paso. Desarrollamos una herramienta adaptada a tu
+                  forma de trabajar para simplificar el día a día y ayudarte a
+                  crecer.
+                </p>
+              </header>
 
-            <!-- SOFTWARE -->
-            <article class="product-block product-block--flip reveal" id="producto-software">
-              <div class="product-main">
-                <div class="product-copy">
-                  <p class="product-label">Software a medida</p>
-                  <h3>Qué es</h3>
-                  <p>
-                    Una herramienta hecha para tu forma de trabajar: gestión,
-                    control de aforo, apps internas… Cuando el Excel (o nada) ya
-                    no da más de sí.
-                  </p>
-                  <h3>Para quién es</h3>
-                  <ul class="product-checks">
-                    <li>Tu caso no se resuelve con una web estándar</li>
-                    <li>Necesitas algo propio que encaje con tu día a día</li>
-                    <li>Quieres acompañamiento de verdad, no un proyecto “y adiós”</li>
-                  </ul>
-                </div>
-                <figure class="product-example">
+              <figure class="product-starter-mock">
+                <button
+                  type="button"
+                  class="product-starter-mock-btn"
+                  data-mock-zoom
+                  aria-label="Ampliar mockup de Software a medida"
+                >
                   <img
-                    src="assets/img/portfolio/Captura.PNG"
-                    alt="Ejemplo de software a medida — gestión hostelería"
+                    src="assets/img/mockProducts/keystone-business-dashboard-mockup.png"
+                    alt="Mockup de Software a medida en escritorio, portátil y móvil"
                     loading="lazy"
                   />
-                  <figcaption>
-                    <span>Ejemplo real</span>
-                    <a
-                      href="https://www.kingourmet.com/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      >Ver proyecto en vivo →</a
-                    >
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="product-includes">
-                <h3>Qué incluye</h3>
-                <ul>
-                  <li>Análisis de necesidades</li>
-                  <li>Prototipo / demo</li>
-                  <li>Desarrollo iterativo</li>
-                  <li>Formación de uso</li>
-                  <li>Mantenimiento opcional</li>
+                  <span class="product-starter-mock-hint">Toca para ampliar</span>
+                </button>
+              </figure>
+
+              <div class="product-includes product-includes--starter">
+                <h3>Software a medida</h3>
+                <ul class="product-checks">
+                  <li>Diseño adaptado a tu negocio</li>
+                  <li>Gestión de clientes, pedidos o reservas</li>
+                  <li>Acceso desde cualquier dispositivo</li>
+                  <li>Automatización de tareas repetitivas</li>
+                  <li>Escalable a medida que tu negocio crece</li>
+                  <li>Soporte y evolución continua</li>
                 </ul>
               </div>
+
               <div class="product-offer">
                 <div class="product-price">
                   <span class="product-price-label">Precio</span>
-                  <strong>A medida</strong>
+                  <strong>Presupuesto personalizado</strong>
                 </div>
                 <a
                   class="btn btn-primary btn-sm"
-                  href="https://wa.me/34722195284?text=Hola%2C%20me%20interesa%20Software%20a%20medida.%20%C2%BFHablamos%3F"
+                  href="https://wa.me/34722195284?text=Hola%2C%20quiero%20hablar%20sobre%20un%20proyecto%20de%20software%20a%20medida"
                   target="_blank"
                   rel="noopener noreferrer"
-                  >Pedir presupuesto</a
+                  >Quiero hablar sobre mi proyecto</a
                 >
               </div>
             </article>
+
           </div>
 
           <p class="products-footnote reveal">
@@ -485,8 +435,92 @@
         </div>
       </section>
 
+      <!-- CASOS DE ÉXITO -->
+      <section class="section" id="casos">
+        <div class="shell">
+          <header class="section-head reveal">
+            <p class="eyebrow">Casos de éxito</p>
+            <h2>Proyectos reales, resultados reales</h2>
+          </header>
+
+          <div class="cases-carousel reveal" data-cases-carousel>
+            <div class="cases-track" tabindex="0" aria-label="Carrusel de casos de éxito">
+              <a
+                class="case-card"
+                href="https://sifualbert.es/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/img/portfolio/CapturaAlbert.PNG"
+                  alt="Web de entrenador personal — sifualbert.es"
+                  loading="lazy"
+                />
+                <span class="case-card-meta">
+                  <span class="case-card-tag">Web Starter</span>
+                  <span class="case-card-link">Ver web →</span>
+                </span>
+              </a>
+
+              <a
+                class="case-card"
+                href="https://www.educationforlife.es/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/img/portfolio/wp.PNG"
+                  alt="Web de negocio — educationforlife.es"
+                  loading="lazy"
+                />
+                <span class="case-card-meta">
+                  <span class="case-card-tag">Web de negocio</span>
+                  <span class="case-card-link">Ver web →</span>
+                </span>
+              </a>
+
+              <a
+                class="case-card"
+                href="https://tbfitness-demo.lovable.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/img/portfolio/demoFitnesCaptura.png"
+                  alt="Automatización de reservas — demo gimnasio"
+                  loading="lazy"
+                />
+                <span class="case-card-meta">
+                  <span class="case-card-tag">Automatización</span>
+                  <span class="case-card-link">Ver demo →</span>
+                </span>
+              </a>
+
+              <a
+                class="case-card"
+                href="https://www.kingourmet.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="assets/img/portfolio/Captura.PNG"
+                  alt="Software a medida — kingourmet.com"
+                  loading="lazy"
+                />
+                <span class="case-card-meta">
+                  <span class="case-card-tag">Software a medida</span>
+                  <span class="case-card-link">Ver proyecto →</span>
+                </span>
+              </a>
+            </div>
+
+            <div class="cases-dots" role="tablist" aria-label="Casos" hidden></div>
+          </div>
+        </div>
+      </section>
+
       <!-- PROCESS -->
-      <section class="section" id="proceso">
+      <section class="section section-alt" id="proceso">
         <div class="shell">
           <header class="section-head reveal">
             <p class="eyebrow" data-i18n="process.eyebrow">Proceso</p>
@@ -530,7 +564,7 @@
       </section>
 
       <!-- FAQ -->
-      <section class="section section-alt" id="faq">
+      <section class="section" id="faq">
         <div class="shell">
           <header class="section-head reveal">
             <p class="eyebrow">FAQ</p>
@@ -649,6 +683,6 @@
       </div>
     </footer>
 
-    <script src="assets/js/site.js?v=20260802-zoom"></script>
+    <script src="assets/js/site.js?v=20260802-casos"></script>
   </body>
 </html>
