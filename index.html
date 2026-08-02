@@ -17,7 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&family=Parisienne&family=Permanent+Marker&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="custom.style.css?v=20260802-casos" />
+    <link rel="stylesheet" href="custom.style.css?v=20260802-nav" />
   </head>
   <body>
     <div class="grain" aria-hidden="true"></div>
@@ -39,25 +39,40 @@
 
     <header class="site-header" id="top">
       <div class="shell header-inner">
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Menú">
-          <span></span><span></span>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav"
+          aria-label="Menú"
+        >
+          <span></span><span></span><span></span>
         </button>
 
-        <nav class="nav" id="nav" aria-label="Principal">
-          <a href="#productos">Productos</a>
-          <a href="#casos">Casos de éxito</a>
-          <a href="#proceso" data-i18n="nav.process">Proceso</a>
-          <a href="#faq" data-i18n="nav.faq">FAQ</a>
-          <a href="#contacto" data-i18n="nav.contact">Contacto</a>
-        </nav>
+        <a class="header-brand" href="#top" aria-label="Hermanos Solé — inicio">
+          <img src="assets/img/Soluciones.png" alt="" width="36" height="36" />
+          <span>Hermanos Solé</span>
+        </a>
 
-        <div class="header-actions">
-          <div class="lang" role="group" aria-label="Idioma" hidden>
-            <button type="button" class="lang-btn is-active" data-lang="es">ES</button>
-            <button type="button" class="lang-btn" data-lang="ca">CA</button>
-            <button type="button" class="lang-btn" data-lang="en">EN</button>
+        <nav class="nav" id="nav" aria-label="Principal">
+          <div class="nav-panel">
+            <p class="nav-eyebrow">Navegar</p>
+            <div class="nav-links">
+              <a href="#productos"><span>01</span>Productos</a>
+              <a href="#casos"><span>02</span>Casos de éxito</a>
+              <a href="#proceso"><span>03</span>Proceso</a>
+              <a href="#faq"><span>04</span>FAQ</a>
+              <a href="#contacto"><span>05</span>Contacto</a>
+            </div>
+            <a
+              class="btn btn-primary nav-cta"
+              href="https://wa.me/34722195284?text=Hola%2C%20quiero%20información%20para%20mi%20negocio"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Hablar por WhatsApp</a
+            >
           </div>
-        </div>
+        </nav>
       </div>
     </header>
 
@@ -328,7 +343,7 @@
                   aria-label="Ampliar mockup de Web Shop"
                 >
                   <img
-                    src="assets/img/mockProducts/casa-lino-ecommerce-mockup.png"
+                    src="assets/img/mockProducts/ember-oak-ecommerce-mockup.png"
                     alt="Mockup de una Web Shop en escritorio, portátil y móvil"
                     loading="lazy"
                   />
@@ -683,6 +698,6 @@
       </div>
     </footer>
 
-    <script src="assets/js/site.js?v=20260802-casos"></script>
+    <script src="assets/js/site.js?v=20260802-nav"></script>
   </body>
 </html>

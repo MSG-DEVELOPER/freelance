@@ -5,15 +5,22 @@
   /* Mobile nav */
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.getElementById("nav");
+  const setNavOpen = (open) => {
+    document.body.classList.toggle("nav-open", open);
+    toggle?.setAttribute("aria-expanded", open ? "true" : "false");
+    toggle?.setAttribute("aria-label", open ? "Cerrar menú" : "Menú");
+  };
   toggle?.addEventListener("click", () => {
-    const open = document.body.classList.toggle("nav-open");
-    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    setNavOpen(!document.body.classList.contains("nav-open"));
   });
   nav?.querySelectorAll("a").forEach((a) => {
-    a.addEventListener("click", () => {
-      document.body.classList.remove("nav-open");
-      toggle?.setAttribute("aria-expanded", "false");
-    });
+    a.addEventListener("click", () => setNavOpen(false));
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setNavOpen(false);
+  });
+  document.querySelector(".header-brand")?.addEventListener("click", () => {
+    setNavOpen(false);
   });
 
   /* Reveal on scroll */
