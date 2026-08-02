@@ -64,5 +64,54 @@
     metrics.forEach((m) => mio.observe(m));
   }
 
+  /* Mock zoom lightbox */
+  const mockTriggers = document.querySelectorAll("[data-mock-zoom]");
+  if (mockTriggers.length) {
+    const dialog = document.createElement("dialog");
+    dialog.className = "mock-lightbox";
+    dialog.setAttribute("aria-label", "Vista ampliada del mockup");
+    dialog.innerHTML = `
+      <div class="mock-lightbox-inner">
+        <div class="mock-lightbox-toolbar">
+          <span>Desliza para ver el mock completo</span>
+          <button type="button" class="mock-lightbox-close" data-mock-close>Cerrar</button>
+        </div>
+        <div class="mock-lightbox-stage">
+          <img alt="" />
+        </div>
+      </div>
+    `;
+    document.body.appendChild(dialog);
+
+    const stageImg = dialog.querySelector(".mock-lightbox-stage img");
+    const closeBtn = dialog.querySelector("[data-mock-close]");
+
+    const openMock = (btn) => {
+      const img = btn.querySelector("img");
+      if (!img || !stageImg) return;
+      stageImg.src = img.currentSrc || img.src;
+      stageImg.alt = img.alt || "Mockup ampliado";
+      if (typeof dialog.showModal === "function") dialog.showModal();
+      else dialog.setAttribute("open", "");
+    };
+
+    const closeMock = () => {
+      if (typeof dialog.close === "function") dialog.close();
+      else dialog.removeAttribute("open");
+    };
+
+    mockTriggers.forEach((btn) => {
+      btn.addEventListener("click", () => openMock(btn));
+    });
+    closeBtn?.addEventListener("click", closeMock);
+    dialog.addEventListener("click", (e) => {
+      if (e.target === dialog) closeMock();
+    });
+    dialog.addEventListener("cancel", (e) => {
+      e.preventDefault();
+      closeMock();
+    });
+  }
+
   /* i18n: desactivado de momento — se vuelve a activar al final */
 })();

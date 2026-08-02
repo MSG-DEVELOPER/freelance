@@ -1407,6 +1407,264 @@ body.nav-open .nav-toggle span:last-child {
   text-align: center;
 }
 
+/* Producto piloto — Web Starter (jerarquía problema → mock → incluye → CTA) */
+.product-block--starter {
+  gap: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.product-starter-head {
+  max-width: 40rem;
+}
+
+.product-starter-problem {
+  margin: 0 0 1rem;
+  font-family: "Parisienne", cursive;
+  font-size: clamp(2.1rem, 6.2vw, 3.2rem);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+  color: var(--gold);
+}
+
+.product-starter-hook {
+  margin: 0 0 1rem;
+  color: var(--text);
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+}
+
+.product-starter-head > p:not(.product-starter-hook) {
+  margin: 0 0 0.85rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.product-starter-head > p:last-child {
+  margin-bottom: 0;
+}
+
+.product-starter-mock {
+  margin: 0;
+  position: relative;
+}
+
+.product-starter-mock::before {
+  content: "";
+  position: absolute;
+  inset: 18% 8% auto;
+  height: 55%;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(47, 111, 237, 0.22),
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.product-starter-mock-btn {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+  text-align: center;
+}
+
+.product-starter-mock-btn:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+.product-starter-mock img {
+  display: block;
+  width: 100%;
+  max-width: 52rem;
+  margin-inline: auto;
+  height: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  pointer-events: none;
+}
+
+.product-starter-mock-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 0.65rem;
+  transform: translateX(-50%);
+  z-index: 2;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(10, 12, 16, 0.78);
+  border: 1px solid rgba(230, 236, 245, 0.12);
+  color: var(--text);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0.95;
+}
+
+@media (min-width: 700px) {
+  .product-starter-mock-hint {
+    display: none;
+  }
+}
+
+/* Lightbox mock */
+.mock-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  background: rgba(6, 8, 12, 0.92);
+  color: inherit;
+}
+
+.mock-lightbox:not([open]) {
+  display: none;
+}
+
+.mock-lightbox::backdrop {
+  background: rgba(6, 8, 12, 0.92);
+}
+
+.mock-lightbox-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 0;
+}
+
+.mock-lightbox-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+}
+
+.mock-lightbox-toolbar span {
+  color: var(--faint);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.mock-lightbox-close {
+  appearance: none;
+  border: 1px solid rgba(230, 236, 245, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.mock-lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.mock-lightbox-stage {
+  min-height: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  padding: 0.5rem 0.75rem 1.25rem;
+  display: grid;
+  place-items: center;
+}
+
+.mock-lightbox-stage img {
+  display: block;
+  width: auto;
+  max-width: none;
+  height: auto;
+  min-width: min(160vw, 920px);
+  border-radius: 4px;
+}
+
+.product-includes--starter {
+  background: rgba(47, 111, 237, 0.07);
+  border-style: solid;
+  border-color: rgba(91, 143, 245, 0.22);
+}
+
+.product-includes--starter h3 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+  background: linear-gradient(120deg, #f2f6ff 10%, var(--accent-2) 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.product-includes--starter .product-checks {
+  gap: 0.7rem;
+}
+
+@media (min-width: 640px) {
+  .product-includes--starter .product-checks,
+  .product-includes--starter ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.75rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .product-includes--starter .product-checks,
+  .product-includes--starter ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.product-includes--starter .product-checks li {
+  padding-left: 1.55rem;
+  font-size: 0.95rem;
+}
+
+.product-includes--starter .product-checks li::before {
+  content: "✔";
+  top: 0.05em;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: none;
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.product-block--starter .product-offer {
+  margin-top: 0.15rem;
+}
+
 .work-list {
   display: grid;
   gap: 2.75rem;
